@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(String buildResult) {
-  if ( buildResult == "SUCCESS" ) {
+  if ( buildResult == "Amira => SUCCESS" ) {
     slackSend color: "good", message: "CONGRATULATION: Job ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was successful ! more info ${env.BUILD_URL}"
   }
   else if( buildResult == "FAILURE" ) { 
